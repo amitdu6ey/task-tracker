@@ -1,0 +1,44 @@
+import { useState } from "react";
+
+const Tasks = () => {
+  const [tasks, setTasks] = useState([
+    {
+      color: "red",
+      value: "#f00"
+    },
+    {
+      color: "green",
+      value: "#0f0"
+    },
+    {
+      color: "blue",
+      value: "#00f"
+    },
+    {
+      color: "cyan",
+      value: "#0ff"
+    },
+    {
+      color: "magenta",
+      value: "#f0f"
+    },
+    {
+      color: "yellow",
+      value: "#ff0"
+    },
+    {
+      color: "black",
+      value: "#000"
+    }
+  ]);
+
+  return (
+    <div>
+      {tasks.map((task) => (
+        <li>{task.color}</li>
+      ))}
+    </div>
+  );
+};
+
+export default Tasks;
